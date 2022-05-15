@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "myapp": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "packages/myapp",
+      "sourceRoot": "packages/myapp/src",
+      "prefix": "app",
+      "architect": {
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "configPath": "../../jest.config.js",
+            "testURL": "http://localhost/",
+            "globalMocks": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "myapp"
+}
