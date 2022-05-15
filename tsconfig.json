@@ -34,8 +34,8 @@
     "strictNullChecks": false,
     "strictFunctionTypes": false,
     "strictPropertyInitialization": false,
-    "types": ["jest", "node"],
-    "lib": ["DOM", "ES2020", "ScriptHost", "DOM.Iterable"]
+    "types": ["jest"],
+    "lib": ["DOM", "ES2020"]
   },
   "include": ["packages/**/*.ts"],
   "exclude": ["node_modules"],
